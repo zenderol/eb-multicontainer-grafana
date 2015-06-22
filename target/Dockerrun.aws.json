@@ -1,0 +1,21 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "graphite-grafana",
+      "image": "zenderol/grafana_graphite",
+      "essential": true,
+      "memory": 1024,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000
+        },
+        {
+          "hostPort": 2000,
+          "containerPort": 2000
+        }
+      ]
+    }
+  ]
+}
